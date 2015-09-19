@@ -1,5 +1,5 @@
 {
-  "name": "countrydb",
+  "name": "country-db",
   "version": "0.0.1",
   "description": "'Library that exposes basic information about countries.'",
   "main": "'src/index.js'",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nunomonteiro/countrydb.git"
+    "url": "git+https://github.com/nunomonteiro/country-db.git"
   },
   "keywords": [
     "Country",
@@ -17,9 +17,9 @@
   "author": "Nuno Monteiro <nfmmonteiro@gmail.com> (https://github.com/nunomonteiro)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nunomonteiro/countrydb/issues"
+    "url": "https://github.com/nunomonteiro/country-db/issues"
   },
-  "homepage": "https://github.com/nunomonteiro/countrydb#readme",
+  "homepage": "https://github.com/nunomonteiro/country-db#readme",
   "dependencies": {
     "lodash": "3.10.1"
   }
