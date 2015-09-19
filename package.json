@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/nunomonteiro/countrydb/issues"
   },
-  "homepage": "https://github.com/nunomonteiro/countrydb#readme"
+  "homepage": "https://github.com/nunomonteiro/countrydb#readme",
+  "dependencies": {
+    "lodash": "3.10.1"
+  }
 }
