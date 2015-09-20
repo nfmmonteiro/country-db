@@ -1,10 +1,12 @@
 {
   "name": "country-db",
+  "version": "0.0.0-semantic-release",
   "description": "Library that exposes basic information about countries.",
   "main": "src/index.js",
   "scripts": {
     "commit": "git-cz",
     "test": "mocha src/index.test.js -w",
+    "test:single": "mocha src/index.test.js",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
