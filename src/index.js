@@ -1,5 +1,5 @@
-var countries = require('./countries.json').countries,
-	_ = require('lodash');
+import _ from 'lodash';
+import {countries} from './countries.json';
 
 function getAllCountryNames(region) {
 	var regionCountries, regionCountryNames;

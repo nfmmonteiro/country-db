@@ -1,9 +1,9 @@
 // Mocha - describe / it
 // Chai - expectations library
 
-var countryDb 	= require('./index'),
-	countries   = require('./countries.json').countries,
-	expect 		= require('chai').expect;
+import countryDb from './index';
+import {countries} from './countries.json';
+import {expect} from 'chai';
 
 function getRefRegions() {
 	var regions = [], region;
