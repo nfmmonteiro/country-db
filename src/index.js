@@ -1,11 +1,15 @@
 var countries = require('./countries.json').countries,
 	_ = require('lodash');
 
-function getAllCountryNames() {
-	var countryNames = countries.map(function(country) {
+function getAllCountryNames(region) {
+	var regionCountries, regionCountryNames;
+	regionCountries = _.filter(countries, function(country) {
+		return (!region || country.region === region);
+	});
+	regionCountryNames = regionCountries.map(function(country) {
 		return country.name;
 	});
-	return countryNames;
+	return regionCountryNames;
 }
 
 function getByAlpha2Code(code) {
