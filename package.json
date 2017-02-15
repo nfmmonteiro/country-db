@@ -17,18 +17,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/nunomonteiro/country-db.git"
+    "url": "https://github.com/nfmmonteiro/country-db.git"
   },
   "keywords": [
     "Country",
     "Database"
   ],
-  "author": "Nuno Monteiro <nfmmonteiro@gmail.com> (https://github.com/nunomonteiro)",
+  "author": "Nuno Monteiro <nfmmonteiro@gmail.com> (https://github.com/nfmmonteiro)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nunomonteiro/country-db/issues"
+    "url": "https://github.com/nfmmonteiro/country-db/issues"
   },
-  "homepage": "https://github.com/nunomonteiro/country-db#readme",
+  "homepage": "https://github.com/nfmmonteiro/country-db#readme",
   "dependencies": {
     "lodash": "3.10.1"
   },
@@ -36,8 +36,8 @@
     "babel": "5.8.23",
     "chai": "3.2.0",
     "codecov.io": "0.1.6",
-    "commitizen": "1.0.4",
-    "cz-conventional-changelog": "1.1.0",
+    "commitizen": "^1.0.4",
+    "cz-conventional-changelog": "^1.1.0",
     "ghooks": "0.3.2",
     "istanbul": "0.3.20",
     "jscs": "2.1.1",
