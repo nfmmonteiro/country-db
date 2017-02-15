@@ -25,8 +25,14 @@ function getByAlpha3Code(code) {
   return country;
 };
 
+function getAllCountries(region) {
+  return _.filter(countries, function(country) {
+    return (!region || country.region === region);
+  });
+}
 module.exports = {
   getAllCountryNames: getAllCountryNames,
   getByAlpha2Code: getByAlpha2Code,
-  getByAlpha3Code: getByAlpha3Code
+  getByAlpha3Code: getByAlpha3Code,
+  getAllCountries: getAllCountries
 };

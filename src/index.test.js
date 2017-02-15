@@ -26,6 +26,16 @@ function getRefCountryNames(region) {
 	return countryNames;
 }
 
+function getRefCountries(region) {
+	var refCountries = [];
+	for (var i = 0; i < countries.length; i++) {
+		if (!region || countries[i].region === region) {
+			refCountries.push(countries[i]);
+		}
+	}
+	return refCountries;
+}
+
 describe('country-db', function() {
 
 	describe('getAllCountryNames function', function() {
@@ -69,6 +79,29 @@ describe('country-db', function() {
 				var returnedCountry = countryDb.getByAlpha3Code(country.alpha3Code);
 				// then
 				expect(returnedCountry).to.eql(country);
+			});
+		});
+	});
+
+	describe('getAllCountries function', function() {
+
+		it('must return all the countries that are on countries.json (when no region is specified)', function() {
+			// given
+			var refCountries = getRefCountries();
+			// when
+			var allCountries = countryDb.getAllCountries();
+			// then
+			expect(allCountries).to.eql(refCountries);
+		});
+
+		getRefRegions().forEach(function(region) {
+			it('must return all the countries of ' + region + ' region that are on countries.json', function() {
+				// given
+				var refCountries = getRefCountries(region);
+				// when
+				var allCountries = countryDb.getAllCountries(region);
+				// then
+				expect(allCountries).to.eql(refCountries);
 			});
 		});
 	});
