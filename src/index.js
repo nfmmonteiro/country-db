@@ -29,10 +29,16 @@ function getAllCountries(region) {
   return _.filter(countries, function(country) {
     return (!region || country.region === region);
   });
+};
+
+function _getCapital(alpha2Code) {
+  return getByAlpha2Code(alpha2Code).capital;
 }
+
 module.exports = {
   getAllCountryNames: getAllCountryNames,
   getByAlpha2Code: getByAlpha2Code,
   getByAlpha3Code: getByAlpha3Code,
-  getAllCountries: getAllCountries
+  getAllCountries: getAllCountries,
+  getCapital: _getCapital
 };
