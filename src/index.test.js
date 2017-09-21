@@ -92,6 +92,13 @@ describe('country-db', function() {
 				expect(returnedCapital).to.eql(country.capital);
 			});
 		});
+
+		it('handles non existing alpha 2 codes', function() {
+			// when
+			var returnedCapital = countryDb.getCapital('zz');
+			// then
+			expect(returnedCapital).to.eql(null);
+		});
 	});
 
 	describe('getAllCountries function', function() {

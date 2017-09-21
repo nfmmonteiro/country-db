@@ -32,7 +32,8 @@ function getAllCountries(region) {
 };
 
 function _getCapital(alpha2Code) {
-  return getByAlpha2Code(alpha2Code).capital;
+  var country = getByAlpha2Code(alpha2Code);
+  return (!!country ? country.capital : null);
 }
 
 module.exports = {
