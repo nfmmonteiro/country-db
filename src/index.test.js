@@ -83,6 +83,24 @@ describe('country-db', function() {
 		});
 	});
 
+	describe('getCapital function', function() {
+		countries.forEach(function(country) {
+			it('must return ' + country.capital + ' for alpha2 code: ' + country.alpha2Code, function() {
+				// when
+					var returnedCapital = countryDb.getCapital(country.alpha2Code);
+				// then
+				expect(returnedCapital).to.eql(country.capital);
+			});
+		});
+
+		it('handles non existing alpha 2 codes', function() {
+			// when
+			var returnedCapital = countryDb.getCapital('zz');
+			// then
+			expect(returnedCapital).to.eql(null);
+		});
+	});
+
 	describe('getAllCountries function', function() {
 
 		it('must return all the countries that are on countries.json (when no region is specified)', function() {
